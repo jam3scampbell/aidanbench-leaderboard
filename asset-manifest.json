@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/AidanBench/static/css/main.e6c13ad2.css",
+    "main.js": "/AidanBench/static/js/main.df4608ea.js",
+    "static/js/453.591e96c8.chunk.js": "/AidanBench/static/js/453.591e96c8.chunk.js",
+    "index.html": "/AidanBench/index.html",
+    "main.e6c13ad2.css.map": "/AidanBench/static/css/main.e6c13ad2.css.map",
+    "main.df4608ea.js.map": "/AidanBench/static/js/main.df4608ea.js.map",
+    "453.591e96c8.chunk.js.map": "/AidanBench/static/js/453.591e96c8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.df4608ea.js"
+  ]
+}
