@@ -279,8 +279,7 @@ function App() {
 
       {/* Intro Paragraph */}
       <Typography variant="body1" align="center" sx={{ mb: 2 }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nunc sit amet nisi
-        eleifend sollicitudin. Nulla facilisi. Fusce eget arcu eget odio facilisis blandit.
+        Some models feel competent despite under-scoring on benchmarks like MMLU, GPQA, MATH, or NIAH. To combat this, we introduce AidanBench, an interactive benchmark which rewards creativity, reliability, contextual attention, and instruction following. AidanBench penalizes mode collapse and inflexibility, has no score ceiling, and aligns with real-world open-ended use. The below visualizer allows you to interact with the results from AidanBench and compare how models respond to questions on the benchmark.
       </Typography>
 
       {/* External Links for GitHub and ArXiv */}
@@ -293,14 +292,14 @@ function App() {
         >
           <GitHubIcon fontSize="large" />
         </IconButton>
-        <IconButton
+        { /* <IconButton
           component="a"
           href="https://arxiv.org/abs/2310.01405"
           target="_blank"
           rel="noopener noreferrer"
         >
           <ArticleIcon fontSize="large" />
-        </IconButton>
+        </IconButton> */}
       </Box>
 
       {/* Filter controls with Select/Deselect All buttons */}
