@@ -184,221 +184,229 @@ function App() {
   }, [selectedModelName, modelsMetrics]);
 
   return (
-    <Box sx={{ p: 4 }}>
-      {/* Intro Header */}
-      <Typography variant="h4" align="center" sx={{ fontWeight: "bold", fontSize: "2rem", mb: 1 }}>
-        AidanBench: Stress-Testing Language Model Creativity on Open-Ended Questions
-      </Typography>
-      
-      {/* Authors */}
-      <Box sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: 2, mb: 1 }}>
-        <Box sx={{ textAlign: "center" }}>
-          <a
-            href="https://aidanmclaughlin.notion.site/Aidan-McLaughlin-13424dff9b2a80608c5eec52ac79207d"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <Typography
-              sx={{
-                fontWeight: "bold",
-                transition: "transform 0.2s",
-                "&:hover": { transform: "translateY(-2px)" },
-              }}
-            >
-              Aidan McLaughlin*<sup>1</sup>
-            </Typography>
-          </a>
-        </Box>
-        <Box sx={{ textAlign: "center" }}>
-          <a
-            href="https://jamescampbell.me"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <Typography
-              sx={{
-                fontWeight: "bold",
-                transition: "transform 0.2s",
-                "&:hover": { transform: "translateY(-2px)" },
-              }}
-            >
-              James Campbell*<sup>2</sup>
-            </Typography>
-          </a>
-        </Box>
-        <Box sx={{ textAlign: "center" }}>
-          <a
-            href="https://www.linkedin.com/in/anujau/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <Typography
-              sx={{
-                fontWeight: "bold",
-                transition: "transform 0.2s",
-                "&:hover": { transform: "translateY(-2px)" },
-              }}
-            >
-              Anuja Uppuluri*<sup>2</sup>
-            </Typography>
-          </a>
-        </Box>
-        <Box sx={{ textAlign: "center" }}>
-          <a
-            href="https://www.cs.cmu.edu/~./yiming/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <Typography
-              sx={{
-                fontWeight: "bold",
-                transition: "transform 0.2s",
-                "&:hover": { transform: "translateY(-2px)" },
-              }}
-            >
-              Yiming Yang<sup>2</sup>
-            </Typography>
-          </a>
-        </Box>
-      </Box>
-      <Box sx={{ textAlign: "center", mb: 1 }}>
-        <Typography variant="caption" display="block">
-          <sup>1</sup> OpenAI (Work done while at Topology Research Corporation)
+    <Box sx={{ 
+      p: 4, 
+      display: "flex", 
+      flexDirection: "column", 
+      alignItems: "center" 
+    }}>
+      {/* Content container with max width */}
+      <Box sx={{ maxWidth: "1000px", width: "100%" }}>
+        {/* Intro Header */}
+        <Typography variant="h4" align="center" sx={{ fontWeight: "bold", fontSize: "2rem", mb: 1 }}>
+          AidanBench: Stress-Testing Language Model Creativity on Open-Ended Questions
         </Typography>
-        <Typography variant="caption" display="block">
-          <sup>2</sup> Carnegie Mellon University
+        
+        {/* Authors */}
+        <Box sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: 2, mb: 1 }}>
+          <Box sx={{ textAlign: "center" }}>
+            <a
+              href="https://aidanmclaughlin.notion.site/Aidan-McLaughlin-13424dff9b2a80608c5eec52ac79207d"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <Typography
+                sx={{
+                  fontWeight: "bold",
+                  transition: "transform 0.2s",
+                  "&:hover": { transform: "translateY(-2px)" },
+                }}
+              >
+                Aidan McLaughlin*<sup>1</sup>
+              </Typography>
+            </a>
+          </Box>
+          <Box sx={{ textAlign: "center" }}>
+            <a
+              href="https://jamescampbell.me"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <Typography
+                sx={{
+                  fontWeight: "bold",
+                  transition: "transform 0.2s",
+                  "&:hover": { transform: "translateY(-2px)" },
+                }}
+              >
+                James Campbell*<sup>2</sup>
+              </Typography>
+            </a>
+          </Box>
+          <Box sx={{ textAlign: "center" }}>
+            <a
+              href="https://www.linkedin.com/in/anujau/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <Typography
+                sx={{
+                  fontWeight: "bold",
+                  transition: "transform 0.2s",
+                  "&:hover": { transform: "translateY(-2px)" },
+                }}
+              >
+                Anuja Uppuluri*<sup>2</sup>
+              </Typography>
+            </a>
+          </Box>
+          <Box sx={{ textAlign: "center" }}>
+            <a
+              href="https://www.cs.cmu.edu/~./yiming/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <Typography
+                sx={{
+                  fontWeight: "bold",
+                  transition: "transform 0.2s",
+                  "&:hover": { transform: "translateY(-2px)" },
+                }}
+              >
+                Yiming Yang<sup>2</sup>
+              </Typography>
+            </a>
+          </Box>
+        </Box>
+        <Box sx={{ textAlign: "center", mb: 1 }}>
+          <Typography variant="caption" display="block">
+            <sup>1</sup> OpenAI (Work done while at Topology Research Corporation)
+          </Typography>
+          <Typography variant="caption" display="block">
+            <sup>2</sup> Carnegie Mellon University
+          </Typography>
+          <Typography variant="caption" display="block" sx={{ mt: 0.5 }}>
+            *equal contribution
+          </Typography>
+        </Box>
+  
+        {/* Intro Paragraph */}
+        <Typography variant="body1" align="center" sx={{ mb: 2 }}>
+          Some models feel competent despite under-scoring on benchmarks like MMLU, GPQA, MATH, or NIAH. To combat this, we introduce AidanBench, an interactive benchmark which rewards creativity, reliability, contextual attention, and instruction following. AidanBench penalizes mode collapse and inflexibility, has no score ceiling, and aligns with real-world open-ended use. The below visualizer allows you to interact with the results from AidanBench and compare how models respond to questions on the benchmark.
         </Typography>
-        <Typography variant="caption" display="block" sx={{ mt: 0.5 }}>
-          *equal contribution
-        </Typography>
-      </Box>
-
-      {/* Intro Paragraph */}
-      <Typography variant="body1" align="center" sx={{ mb: 2 }}>
-        Some models feel competent despite under-scoring on benchmarks like MMLU, GPQA, MATH, or NIAH. To combat this, we introduce AidanBench, an interactive benchmark which rewards creativity, reliability, contextual attention, and instruction following. AidanBench penalizes mode collapse and inflexibility, has no score ceiling, and aligns with real-world open-ended use. The below visualizer allows you to interact with the results from AidanBench and compare how models respond to questions on the benchmark.
-      </Typography>
-
-      {/* External Links for GitHub and ArXiv */}
-      <Box sx={{ display: "flex", justifyContent: "center", gap: 2, mb: 4 }}>
-        <IconButton
-          component="a"
-          href="https://github.com/aidanmclaughlin/AidanBench"
-          target="_blank"
-          rel="noopener noreferrer"
+  
+        {/* External Links for GitHub and ArXiv */}
+        <Box sx={{ display: "flex", justifyContent: "center", gap: 2, mb: 4 }}>
+          <IconButton
+            component="a"
+            href="https://github.com/aidanmclaughlin/AidanBench"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHubIcon fontSize="large" />
+          </IconButton>
+          { /* <IconButton
+            component="a"
+            href="https://arxiv.org/abs/2310.01405"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ArticleIcon fontSize="large" />
+          </IconButton> */}
+        </Box>
+  
+        {/* Filter controls with Select/Deselect All buttons */}
+        <Box
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 2,
+            alignItems: "center",
+            justifyContent: "center",
+            mb: 4,
+          }}
         >
-          <GitHubIcon fontSize="large" />
-        </IconButton>
-        { /* <IconButton
-          component="a"
-          href="https://arxiv.org/abs/2310.01405"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <ArticleIcon fontSize="large" />
-        </IconButton> */}
+          <FormControl sx={{ minWidth: 300 }}>
+            <InputLabel id="question-filter-label" sx={{ fontWeight: "bold" }}>
+              Filter by Question
+            </InputLabel>
+            <Select
+              labelId="question-filter-label"
+              multiple
+              value={selectedQuestions}
+              onChange={handleFilterChange}
+              input={<OutlinedInput label="Filter by Question" />}
+              renderValue={(selected) => selected.join(", ")}
+              sx={{ fontWeight: "bold", fontSize: "1rem" }}
+            >
+              {uniqueQuestions.map((question) => (
+                <MenuItem key={question} value={question}>
+                  <Checkbox checked={selectedQuestions.indexOf(question) > -1} />
+                  <ListItemText primary={question} sx={{ fontWeight: "bold" }} />
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+          <Button variant="contained" onClick={handleSelectAll} sx={{ fontWeight: "bold", fontSize: "1rem" }}>
+            Select All Questions
+          </Button>
+          <Button variant="outlined" onClick={handleDeselectAll} sx={{ fontWeight: "bold", fontSize: "1rem" }}>
+            Deselect All Questions
+          </Button>
+        </Box>
+  
+        {/* Main Table with horizontal bar chart effect and interactive hover */}
+        <TableContainer component={Paper} sx={{ width: "100%", mb: 4 }}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell sx={{ fontWeight: "bold", fontSize: "1.1rem" }}>Model</TableCell>
+                <TableCell align="right" sx={{ fontWeight: "bold", fontSize: "1.1rem" }}>
+                  Total
+                </TableCell>
+                <TableCell align="right" sx={{ fontWeight: "bold", fontSize: "1.1rem" }}>
+                  Coherence
+                </TableCell>
+                <TableCell align="right" sx={{ fontWeight: "bold", fontSize: "1.1rem" }}>
+                  Dissimilarity
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {modelsMetrics.map((model) => {
+                const company = model.modelName.split("/")[0].toLowerCase();
+                const rowColor = COMPANY_COLORS[company] || "#cccccc";
+                const ratio = bestTotal ? (model.totalResponses / bestTotal) * 100 : 0;
+                return (
+                  <TableRow
+                    key={model.modelName}
+                    hover
+                    onClick={() => handleModelClick(model.modelName)}
+                    sx={{
+                      cursor: "pointer",
+                      transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                      // Linear gradient bar effect: colored portion proportional to totalResponses.
+                      background: `linear-gradient(to right, ${rowColor} ${ratio}%, white ${ratio}%)`,
+                      ":hover": {
+                        transform: "scale(1.02)",
+                        boxShadow: 3,
+                      },
+                    }}
+                  >
+                    <TableCell sx={{ fontWeight: "bold", fontSize: "1rem" }} component="th" scope="row">
+                      {model.modelName}
+                    </TableCell>
+                    <TableCell align="right" sx={{ fontWeight: "bold", fontSize: "1rem" }}>
+                      {model.totalResponses}
+                    </TableCell>
+                    <TableCell align="right" sx={{ fontWeight: "bold", fontSize: "1rem" }}>
+                      {model.totalCoherence}
+                    </TableCell>
+                    <TableCell align="right" sx={{ fontWeight: "bold", fontSize: "1rem" }}>
+                      {model.totalDissimilarity}
+                    </TableCell>
+                  </TableRow>
+                );
+              })}
+            </TableBody>
+          </Table>
+        </TableContainer>
       </Box>
-
-      {/* Filter controls with Select/Deselect All buttons */}
-      <Box
-        sx={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: 2,
-          alignItems: "center",
-          justifyContent: "center",
-          mb: 4,
-        }}
-      >
-        <FormControl sx={{ minWidth: 300 }}>
-          <InputLabel id="question-filter-label" sx={{ fontWeight: "bold" }}>
-            Filter by Question
-          </InputLabel>
-          <Select
-            labelId="question-filter-label"
-            multiple
-            value={selectedQuestions}
-            onChange={handleFilterChange}
-            input={<OutlinedInput label="Filter by Question" />}
-            renderValue={(selected) => selected.join(", ")}
-            sx={{ fontWeight: "bold", fontSize: "1rem" }}
-          >
-            {uniqueQuestions.map((question) => (
-              <MenuItem key={question} value={question}>
-                <Checkbox checked={selectedQuestions.indexOf(question) > -1} />
-                <ListItemText primary={question} sx={{ fontWeight: "bold" }} />
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-        <Button variant="contained" onClick={handleSelectAll} sx={{ fontWeight: "bold", fontSize: "1rem" }}>
-          Select All Questions
-        </Button>
-        <Button variant="outlined" onClick={handleDeselectAll} sx={{ fontWeight: "bold", fontSize: "1rem" }}>
-          Deselect All Questions
-        </Button>
-      </Box>
-
-      {/* Main Table with horizontal bar chart effect and interactive hover */}
-      <TableContainer component={Paper} sx={{ maxWidth: 1000, mx: "auto", mb: 4 }}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell sx={{ fontWeight: "bold", fontSize: "1.1rem" }}>Model</TableCell>
-              <TableCell align="right" sx={{ fontWeight: "bold", fontSize: "1.1rem" }}>
-                Total
-              </TableCell>
-              <TableCell align="right" sx={{ fontWeight: "bold", fontSize: "1.1rem" }}>
-                Coherence
-              </TableCell>
-              <TableCell align="right" sx={{ fontWeight: "bold", fontSize: "1.1rem" }}>
-                Dissimilarity
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {modelsMetrics.map((model) => {
-              const company = model.modelName.split("/")[0].toLowerCase();
-              const rowColor = COMPANY_COLORS[company] || "#cccccc";
-              const ratio = bestTotal ? (model.totalResponses / bestTotal) * 100 : 0;
-              return (
-                <TableRow
-                  key={model.modelName}
-                  hover
-                  onClick={() => handleModelClick(model.modelName)}
-                  sx={{
-                    cursor: "pointer",
-                    transition: "transform 0.2s ease, box-shadow 0.2s ease",
-                    // Linear gradient bar effect: colored portion proportional to totalResponses.
-                    background: `linear-gradient(to right, ${rowColor} ${ratio}%, white ${ratio}%)`,
-                    ":hover": {
-                      transform: "scale(1.02)",
-                      boxShadow: 3,
-                    },
-                  }}
-                >
-                  <TableCell sx={{ fontWeight: "bold", fontSize: "1rem" }} component="th" scope="row">
-                    {model.modelName}
-                  </TableCell>
-                  <TableCell align="right" sx={{ fontWeight: "bold", fontSize: "1rem" }}>
-                    {model.totalResponses}
-                  </TableCell>
-                  <TableCell align="right" sx={{ fontWeight: "bold", fontSize: "1rem" }}>
-                    {model.totalCoherence}
-                  </TableCell>
-                  <TableCell align="right" sx={{ fontWeight: "bold", fontSize: "1rem" }}>
-                    {model.totalDissimilarity}
-                  </TableCell>
-                </TableRow>
-              );
-            })}
-          </TableBody>
-        </Table>
-      </TableContainer>
-
+  
       {/* Modal for detailed model view (normal font weight) */}
       <Modal open={modalOpen} onClose={handleClose}>
         <Box sx={modalStyle}>
@@ -434,7 +442,7 @@ function App() {
                       },
                     ],
                   };
-
+  
                   const chartOptions = {
                     responsive: true,
                     plugins: {
@@ -447,7 +455,7 @@ function App() {
                       },
                     },
                   };
-
+  
                   return (
                     <Box key={question} sx={{ mt: 2, pl: 2, borderLeft: 2, borderColor: "grey.300", mb: 4 }}>
                       <Typography variant="body1" sx={{ fontSize: "1.1rem" }}>
