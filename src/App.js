@@ -193,12 +193,12 @@ function App() {
       {/* Content container with max width */}
       <Box sx={{ maxWidth: "1000px", width: "100%" }}>
         {/* Intro Header */}
-        <Typography variant="h4" align="center" sx={{ fontWeight: "bold", fontSize: "2rem", mb: 1 }}>
+        <Typography variant="h4" align="center" sx={{ fontWeight: "bold", fontSize: "2rem", mb: 3 }}>
           AidanBench: Stress-Testing Language Model Creativity on Open-Ended Questions
         </Typography>
         
         {/* Authors */}
-        <Box sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: 2, mb: 1 }}>
+        <Box sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: 2, mb: 4 }}>
           <Box sx={{ textAlign: "center" }}>
             <a
               href="https://aidanmclaughlin.notion.site/Aidan-McLaughlin-13424dff9b2a80608c5eec52ac79207d"
@@ -272,44 +272,13 @@ function App() {
             </a>
           </Box>
         </Box>
-        <Box sx={{ textAlign: "center", mb: 1 }}>
-          <Typography variant="caption" display="block">
-            <sup>1</sup> OpenAI (Work done while at Topology Research Corporation)
-          </Typography>
-          <Typography variant="caption" display="block">
-            <sup>2</sup> Carnegie Mellon University
-          </Typography>
-          <Typography variant="caption" display="block" sx={{ mt: 0.5 }}>
-            *equal contribution
-          </Typography>
-        </Box>
-  
+
         {/* Intro Paragraph */}
-        <Typography variant="body1" align="center" sx={{ mb: 2 }}>
-          Some models feel competent despite under-scoring on benchmarks like MMLU, GPQA, MATH, or NIAH. To combat this, we introduce AidanBench, an interactive benchmark which rewards creativity, reliability, contextual attention, and instruction following. AidanBench penalizes mode collapse and inflexibility, has no score ceiling, and aligns with real-world open-ended use. The below visualizer allows you to interact with the results from AidanBench and compare how models respond to questions on the benchmark.
+        <Typography variant="body1" align="center" sx={{ mb: 4 }}>
+          We introduce <Typography component="span" sx={{ fontWeight: "bold" }}>AidanBench</Typography>, a benchmark evaluating sustained open-ended generation in large language models (LLMs). Assessing 45 leading models, OpenAI's <Typography component="span" sx={{ fontFamily: "monospace" }}>o1</Typography> (6,117 valid answers) leads, surpassing the top non-reasoning model, OpenAI's <Typography component="span" sx={{ fontFamily: "monospace" }}>gpt-4.5-preview</Typography> (3,066 answers), by approximately 99.5%. Google's <Typography component="span" sx={{ fontFamily: "monospace" }}>gemini-2.0-flash-thinking-exp-1219</Typography> emerges as the most cost-effective frontier model. Performance strongly correlates with model size (r=0.985) and moderately correlates with LMSYS scores (r=0.597). Scores exhibit an average month-over-month improvement of 22.15%. AidanBench uses iterative prompting to measure how long models can produce unique, coherent answers to test sustained creativity. Its iterative design ensures no artificial score ceiling, enabling continuous differentiation among increasingly capable models.
         </Typography>
-  
-        {/* External Links for GitHub and ArXiv */}
-        <Box sx={{ display: "flex", justifyContent: "center", gap: 2, mb: 4 }}>
-          <IconButton
-            component="a"
-            href="https://github.com/aidanmclaughlin/AidanBench"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <GitHubIcon fontSize="large" />
-          </IconButton>
-          { /* <IconButton
-            component="a"
-            href="https://arxiv.org/abs/2310.01405"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ArticleIcon fontSize="large" />
-          </IconButton> */}
-        </Box>
-  
-        {/* Filter controls with Select/Deselect All buttons */}
+
+        {/* Filter controls with Select/Deselect All buttons and GitHub icon */}
         <Box
           sx={{
             display: "flex",
@@ -317,7 +286,7 @@ function App() {
             gap: 2,
             alignItems: "center",
             justifyContent: "center",
-            mb: 4,
+            mb: 5,
           }}
         >
           <FormControl sx={{ minWidth: 300 }}>
@@ -331,7 +300,7 @@ function App() {
               onChange={handleFilterChange}
               input={<OutlinedInput label="Filter by Question" />}
               renderValue={(selected) => selected.join(", ")}
-              sx={{ fontWeight: "bold", fontSize: "1rem" }}
+              sx={{ fontWeight: "bold", fontSize: "1rem", height: "56px" }}
             >
               {uniqueQuestions.map((question) => (
                 <MenuItem key={question} value={question}>
@@ -341,16 +310,34 @@ function App() {
               ))}
             </Select>
           </FormControl>
-          <Button variant="contained" onClick={handleSelectAll} sx={{ fontWeight: "bold", fontSize: "1rem" }}>
+          <Button variant="contained" onClick={handleSelectAll} sx={{ fontWeight: "bold", fontSize: "1rem", height: "56px" }}>
             Select All Questions
           </Button>
-          <Button variant="outlined" onClick={handleDeselectAll} sx={{ fontWeight: "bold", fontSize: "1rem" }}>
+          <Button variant="outlined" onClick={handleDeselectAll} sx={{ fontWeight: "bold", fontSize: "1rem", height: "56px" }}>
             Deselect All Questions
           </Button>
+          <IconButton
+            component="a"
+            href="https://github.com/aidanmclaughlin/AidanBench"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{ height: "56px", width: "56px" }}
+          >
+            <GitHubIcon fontSize="large" />
+          </IconButton>
+          { /* <IconButton
+            component="a"
+            href="https://arxiv.org/abs/2310.01405"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{ height: "56px", width: "56px" }}
+          >
+            <ArticleIcon fontSize="large" />
+          </IconButton> */}
         </Box>
   
         {/* Main Table with horizontal bar chart effect and interactive hover */}
-        <TableContainer component={Paper} sx={{ width: "100%", mb: 4 }}>
+        <TableContainer component={Paper} sx={{ width: "100%", mb: 5 }}>
           <Table>
             <TableHead>
               <TableRow>
@@ -405,6 +392,19 @@ function App() {
             </TableBody>
           </Table>
         </TableContainer>
+      </Box>
+
+      {/* Author Affiliations */}
+      <Box sx={{ textAlign: "center", mb: 4, mt: 5 }}>
+        <Typography variant="caption" display="block">
+          <sup>1</sup> OpenAI (Work done while at Topology Research Corporation)
+        </Typography>
+        <Typography variant="caption" display="block">
+          <sup>2</sup> Carnegie Mellon University
+        </Typography>
+        <Typography variant="caption" display="block" sx={{ mt: 0.5 }}>
+          *equal contribution
+        </Typography>
       </Box>
   
       {/* Modal for detailed model view (normal font weight) */}
