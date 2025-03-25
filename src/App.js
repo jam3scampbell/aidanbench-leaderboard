@@ -201,7 +201,7 @@ function App() {
         <Box sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: 2, mb: 4 }}>
           <Box sx={{ textAlign: "center" }}>
             <a
-              href="https://aidanmclaughlin.notion.site/Aidan-McLaughlin-13424dff9b2a80608c5eec52ac79207d"
+              href="https://aidanmclaughlin.notion.site/"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none", color: "inherit" }}
@@ -237,7 +237,7 @@ function App() {
           </Box>
           <Box sx={{ textAlign: "center" }}>
             <a
-              href="https://www.linkedin.com/in/anujau/"
+              href="https://anujauppuluri.com/"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none", color: "inherit" }}
